@@ -167,7 +167,7 @@ def update_cart(request, cart_item_id,action):
             cart_item.itemQyt+=1
         elif action == 'remove':
             cart_item.itemQyt -= 1
-            if cart_item.itemQyt == 0:
+            if  cart_item.itemQyt == 0:
                 cart_item.delete()
         cart_item.save()
     except Exception as e:
